@@ -8,8 +8,9 @@ COMMAND="clear"
 if sudo -n $COMMAND; then
     echo "No sudo password, can execute as superuser"
 else
-    echo "Password is required for sudo exiting."
+    echo "Password is required for sudo! Can't execute"
     sleep 0.5
+    clear
     exit 1
 fi
 clear
