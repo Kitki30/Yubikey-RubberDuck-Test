@@ -9,7 +9,11 @@ if sudo -n $COMMAND; then
     echo "No sudo password, can execute as superuser"
 else
     echo "Password is required for sudo! Can't execute"
-    sleep 0.5
+    zenity \
+    --info \
+    --text="<span size=\"xx-large\">Cannot execute.</span>\n\nGet your <b>coffee</b>." \
+    --title="Sudo is protected by password" \
+    --ok-label="Exit"
     clear
     exit 1
 fi
