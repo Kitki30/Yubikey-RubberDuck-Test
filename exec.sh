@@ -11,8 +11,8 @@ else
     echo "Password is required for sudo! Can't execute"
     zenity \
     --info \
-    --text="<span size=\"xx-large\">Cannot execute.</span>\n\nGet your <b>coffee</b>." \
-    --title="Sudo is protected by password" \
+    --text="<span size=\"xx-large\">Cannot execute.</span>\n\nSudo is protected by password." \
+    --title="Cannot execute" \
     --ok-label="Exit"
     clear
     exit 1
